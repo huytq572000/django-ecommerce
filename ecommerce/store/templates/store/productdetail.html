@@ -1,0 +1,60 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+       <div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- Product main img -->
+					<div class="col-md-5 col-md-push-2">
+						<div id="product-main-img">
+							<div class="product-preview">
+								<img src="{{product.imageURL}}" alt="">
+							</div>
+						</div>
+					</div>
+					<!-- /Product main img -->
+
+					<!-- Product thumb imgs -->
+					<div class="col-md-2  col-md-pull-5">
+						<div id="product-imgs">
+							<div class="product-preview">
+								<img src="{{product.imageURL}}" alt="">
+							</div>
+
+
+						</div>
+					</div>
+					<!-- /Product thumb imgs -->
+
+					<!-- Product details lấy-->
+					<div class="col-md-5">
+						<div class="product-details">
+							<h2 class="product-name">{{product.name}}</h2>
+
+							<div>
+								<h3 class="product-price">${{product.price|floatformat:2}}</h3>
+
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+					<!-- /Product details -->
+
+					<!-- Product tab lấy-->
+
+								<!-- /tab3  -->
+
+							<!-- /product tab content  -->
+						</div>
+					</div>
+					<!-- /product tab -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+
+{% endblock content %}

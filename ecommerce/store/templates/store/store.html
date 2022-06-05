@@ -1,0 +1,33 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" style="margin-top:50px">
+     <div class="row">
+		 {% for product in products %}
+		<div class="col-lg-3">
+			<div class="product">
+				<div class="product-img">
+					<img class="thumbnail" src="{{product.imageURL}}" alt="">
+					<div class="product-label">
+						<span class="new">NEW</span>
+					</div>
+				</div>
+				<div class="product-body ">
+					<p class="product-category">{{product.category}}</p>
+					<h3 class="product-name"><a href="#">{{product.name}}</a></h3>
+					<h4 class="product-price">{{product.price}} VNĐ</h4>
+
+				</div>
+				<div class="add-to-cart">
+					<button data-product={{product.id}} data-action="add" class="add-to-cart-btn update-cart">thêm vào giỏ hàng</button>
+				</div>
+                <div id="slick-nav-1" class="products-slick-nav"></div>
+			</div>
+		</div>
+{% endfor %}
+	</div>
+</div>
+{% endblock content %}
+
+
